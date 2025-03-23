@@ -1,13 +1,8 @@
 ﻿{
   "name": "ru.zeph1rr.zeph1rrgamebase",
-  "version": "0.0.3",
-  "displayName": "Zeph1rr Game Base",
+  "version": "0.0.4",
+  "displayName": "Zeph1rrGameBase",
   "description": "This is a package with base classed to creating game with unity",
-  "unity": "2019.1",
-  "dependencies": { },
-  "author": {
-    "name": "Zeph1rr",
-    "email": "grianton535@gmail.com",
-    "url": "https://t.me/zeph1rr"
-  }
+  "unity": "6000.0",
+  "dependencies": { }
 }
