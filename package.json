@@ -1,6 +1,6 @@
 ﻿{
   "name": "ru.zeph1rr.zeph1rrgamebase",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "displayName": "Zeph1rr Game Base",
   "description": "This is a package with base classed to creating game with unity",
   "unity": "2019.1",
