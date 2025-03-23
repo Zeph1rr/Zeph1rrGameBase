@@ -7,17 +7,17 @@ namespace Zeph1rrGameBase.Scripts.Core.Scene
     {
         public string SceneName { get; }
 
-        private readonly ISceneEntryPoint _sceneEntryPoint;
+        private ISceneEntryPoint _sceneEntryPoint;
         
         public Scene(string sceneName)
         {
             SceneName = sceneName;
-            var allMonoBehaviours = Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None);
-            _sceneEntryPoint = allMonoBehaviours.OfType<ISceneEntryPoint>().FirstOrDefault();
         }
 
         public void StartScene()
         {
+            var allMonoBehaviours = Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None);
+            _sceneEntryPoint = allMonoBehaviours.OfType<ISceneEntryPoint>().FirstOrDefault();
             _sceneEntryPoint?.Run();
         }
     }
