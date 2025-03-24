@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using UnityEngine;
+using Zeph1rrGameBase.Scripts.Core.DI;
 
 namespace Zeph1rrGameBase.Scripts.Core.Scene
 {
@@ -14,10 +15,15 @@ namespace Zeph1rrGameBase.Scripts.Core.Scene
             SceneName = sceneName;
         }
 
-        public void StartScene()
+        public void Initialize(DIContainer rootContainer)
         {
             var allMonoBehaviours = Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None);
             _sceneEntryPoint = allMonoBehaviours.OfType<ISceneEntryPoint>().FirstOrDefault();
+            _sceneEntryPoint.Initialize(rootContainer);
+        }
+
+        public void StartScene()
+        {
             _sceneEntryPoint?.Run();
         }
     }

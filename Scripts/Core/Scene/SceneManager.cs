@@ -7,14 +7,14 @@ namespace Zeph1rrGameBase.Scripts.Core.Scene
     {
         private static bool _sceneLoading;
 
-        public static IEnumerator LoadSceneAsync(Scene scene, Action callback)
+        public static IEnumerator LoadSceneAsync(string sceneName, Action<Scene> callback = null)
         {
             if (_sceneLoading) yield break;
-            _sceneLoading = false;
-            yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(scene.SceneName);
-            scene.StartScene();
-            callback.Invoke();
             _sceneLoading = true;
+            yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
+            var scene = new Scene(sceneName);
+            callback?.Invoke(scene);
+            _sceneLoading = false;
         }
     }
 }

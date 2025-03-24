@@ -1,6 +1,6 @@
-﻿namespace Zeph1rrGameBase.Scripts.Game2D.Monos
+﻿namespace Zeph1rrGameBase.Scripts.Core.Monos
 {
-    public abstract class MonoInterlayer<T>: Game2D.Monos.Mono
+    public abstract class MonoInterlayer<T>: Mono
     {
         public T ParentObject { get; private set; }
 

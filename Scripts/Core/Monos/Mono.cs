@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace Zeph1rrGameBase.Scripts.Game2D.Monos
+namespace Zeph1rrGameBase.Scripts.Core.Monos
 {
     public abstract class Mono : MonoBehaviour
     {

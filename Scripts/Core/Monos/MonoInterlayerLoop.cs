@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Zeph1rrGameBase.Scripts.Game2D.Monos
+namespace Zeph1rrGameBase.Scripts.Core.Monos
 {
     public abstract class MonoInterlayerLoop<T> : MonoInterlayer<T>
     {
